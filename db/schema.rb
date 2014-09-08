@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20140811165043) do
 
   create_table "medications", force: true do |t|
     t.string "name"
+    t.string "patient_id"
   end
 
   create_table "patients", force: true do |t|

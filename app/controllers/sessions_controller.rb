@@ -22,4 +22,8 @@ class SessionsController < ApplicationController
     redirect_to signin_path
   end
 
+  def current_user
+    @user = User.find(params[:id])
+  end
+
 end

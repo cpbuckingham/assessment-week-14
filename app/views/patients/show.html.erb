@@ -1,0 +1,8 @@
+<%= @patients.first_name %>
+<br>
+<%= link_to "Add medicaiton", new_patient_medication_path(@patients.id) %>
+<br>
+<br>
+<% @med.each do |meds| %>
+  <li><%= meds.name %></li>
+<%end%>

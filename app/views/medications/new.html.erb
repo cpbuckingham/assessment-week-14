@@ -1,0 +1,20 @@
+<h1>Add Medication</h1>
+<div class="errors">
+  <% if @med.errors.any? %>
+    <% @med.errors.full_messages.each do |error| %>
+      <%= error %>
+    <% end %>
+  <% end %>
+</div>
+<br>
+<%= form_for (@med), url: patient_medications_path, method: :create, html: {class: "create_rant_form"} do |f| %>
+  <div>
+    <%= f.label :name %>
+    <br>
+    <%= f.text_field :name, autofocus: true %>
+  <div>
+    <br>
+    <%= f.submit "Add med" %>
+  </div>
+    </div>
+<%end %>

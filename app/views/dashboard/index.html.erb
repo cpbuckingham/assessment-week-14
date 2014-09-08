@@ -10,7 +10,7 @@
   <tbody>
   <% @patients.each do |patient| %>
     <tr>
-      <td><%= full_name(patient) %></td>
+      <td><%=link_to full_name(patient), patient_path(patient.id) %></td>
     </tr>
   <% end %>
   </tbody>
@@ -24,7 +24,7 @@
   </tr>
   </thead>
   <tbody>
-  <% @medications.each do |medication| %>
+  <% @med.each do |medication| %>
       <tr>
         <td><%= medication.name %></td>
       </tr>
